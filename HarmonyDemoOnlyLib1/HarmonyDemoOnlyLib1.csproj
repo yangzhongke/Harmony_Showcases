@@ -6,6 +6,7 @@
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Description>Demo only, don't use it in Production</Description>
+        <Version>1.0.1</Version>
     </PropertyGroup>
 
     <ItemGroup>

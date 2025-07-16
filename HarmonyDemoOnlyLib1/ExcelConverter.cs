@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 
 namespace HarmonyDemoOnlyLib1;
@@ -8,7 +7,6 @@ public class ExcelConverter
 {
     public string ConvertToText(string filename)
     {
-        LicenceManager.Check();
         StringBuilder sb = new ();
         using XSSFWorkbook workbook = new XSSFWorkbook(filename, true);
         for (int iSheet = 0; iSheet < workbook.NumberOfSheets; iSheet++)
@@ -27,5 +25,11 @@ public class ExcelConverter
             }
         }
         return sb.ToString();
+    }
+
+    public int Add(int i, int j)
+    {
+        LicenceManager.Check();
+        return i + j;
     }
 }
